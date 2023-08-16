@@ -1,3 +1,4 @@
+// 문제 1. 운동 중독 플레이어
 #include <iostream>
 #include <cmath>
 using namespace std;
