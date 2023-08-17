@@ -1,5 +1,4 @@
 // 문제 4. 완벽한 햄버거 만들기
-
 #include <iostream>
 using namespace std;
 int main() {
