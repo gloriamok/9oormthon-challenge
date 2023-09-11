@@ -5,11 +5,10 @@
 using namespace std;
 
 int main() {
-	ios::sync_with_stdio(0); cin.tie(0);
 	const int MAX = 100001;
 	int N, M, u, v, num = 0;
 	vector<int> G[MAX];
-	int lineNum[MAX]{}, computerNum[MAX]{}, minComputer[MAX]{}, computerCpnt[MAX]{};
+	int lineNum[MAX]{}, computerNum[MAX]{}, computerCpnt[MAX]{};
 	bool visited[MAX]{};
 	cin >> N >> M;
 	for(int i=1;i<=M;i++) {
@@ -22,7 +21,6 @@ int main() {
 			visited[i] = 1;
 			computerCpnt[i] = num;
 			computerNum[num]++;
-			minComputer[num] = i;
 			queue<int> q;
 			q.push(i);
 			while(!q.empty()) {
