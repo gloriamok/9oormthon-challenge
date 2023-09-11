@@ -1,6 +1,5 @@
 // 문제 16. 연합
 #include <iostream>
-#include <vector>
 #include <queue>
 using namespace std;
 
