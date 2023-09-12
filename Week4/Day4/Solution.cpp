@@ -1,43 +1,42 @@
 // 문제 19. 대체 경로
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <queue>
 using namespace std;
 
-const int MAX = 1004;
-int dist[MAX], no[MAX];
-vector<int> G[MAX];
+int N, M, S, E, u, v, minCityNum;
+vector<int> G[1001];
 
-int BFS(int S, int E) {
-    if (no[S]) return -1;
-    memset(dist, 0x3f, sizeof(dist));
-    queue<int> Q;
-    dist[S] = 1;
-    Q.push(S);
-    while (!Q.empty()) {
-        int cur = Q.front(); Q.pop();
-        for (int next : G[cur]) {
-            if (no[next] || dist[next] <= dist[cur] + 1) continue;
-            dist[next] = dist[cur] + 1;
-            Q.push(next);
-        }
-    }
-    return (dist[E] > 1E9 ? -1 : dist[E]);
+int bfs(int i) {
+	if (i == S || i == E) return -1;
+	int visited[1001]{};
+	visited[i] = 1;
+	visited[S] = 1;
+	queue<int> q;
+	q.push(S);
+	while(!q.empty()) {
+		int f = q.front();
+		q.pop();
+		for(int j : G[f]) {
+			if (!visited[j]) {
+				visited[j] = visited[f] + 1;
+				if (j == E) return visited[j];
+				q.push(j);
+			}
+		}
+	}
+	return -1;
 }
 
 int main() {
-    ios::sync_with_stdio(0); cin.tie(0);
-    int N, M, S, E;
-    cin >> N >> M >> S >> E;
-    for (int i = 0; i < M; ++i) {
-        int a, b;
-        cin >> a >> b;
-        G[a].push_back(b);
-        G[b].push_back(a);
-    }
-
-    for (int i = 1; i <= N; ++i) {
-        no[i] = 1;
-        cout << BFS(S, E) << '\n';
-        no[i] = 0;
-    }
-    return 0;
+	cin >> N >> M >> S >> E;
+	for(int i=1;i<=M;i++) {
+		cin >> u >> v;
+		G[u].push_back(v);
+		G[v].push_back(u);
+	}
+	for(int i=1;i<=N;i++) {
+		minCityNum = bfs(i);
+		cout << minCityNum << "\n";
+	}
 }
