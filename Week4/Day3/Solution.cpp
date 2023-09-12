@@ -1,28 +1,32 @@
 // 문제 18. 중첩 점
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-const int MAX = 103;
-int dp[2][MAX][MAX];
-
 int main() {
-    ios::sync_with_stdio(0); cin.tie(0);
-    long long N, M, ans = 0;
-    cin >> N >> M;
-
-    for (int i = 0; i < M; ++i) {
-        int y, x;
-        char d;
-        cin >> y >> x >> d;
-        if (d == 'L') for (int k = x; k > 0; --k) dp[0][y][k]++;
-        else if (d == 'R') for (int k = x; k <= N; ++k) dp[0][y][k]++;
-        else if (d == 'U') for (int k = y; k > 0; --k) dp[1][k][x]++;
-        else for (int k = y; k <= N; ++k) dp[1][k][x]++;
-    }
-
-    for (int y = 1; y <= N; ++y) for (int x = 1; x <= N; ++x)
-        ans += 1LL * dp[0][y][x] * dp[1][y][x];
-
-    cout << ans << '\n';
-    return 0;
+	int N, M, y, x, k, dy[4] = {-1,1,0,0}, dx[4] = {0,0,-1,1}; // 상하좌우
+	long int pointNum = 0;
+	char d;
+	pair<long int, long int> square[101][101]{}; // pair<세로줄, 가로줄>
+	cin >> N >> M;
+	for(int i=1;i<=M;i++) {
+		cin >> y >> x >> d;
+		switch(d) {
+			case 'U':
+				k = 0; break;
+			case 'D':
+				k = 1; break;
+			case 'L':
+				k = 2; break;
+			case 'R':
+				k = 3; break;
+		}
+		while(y > 0 && y <= N && x > 0 && x <= N) {
+			if (k == 0 || k == 1) square[y][x].first++;
+			else square[y][x].second++;
+			y += dy[k];
+			x += dx[k];
+		}
+	}
+	for(int i=1;i<=N;i++) for (int j=1;j<=N;j++) pointNum += (square[i][j].first*square[i][j].second);
+	cout << pointNum;
 }
