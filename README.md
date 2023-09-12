@@ -1,7 +1,7 @@
 # 구름톤 챌린지
 - 기간: 8/14(월)~9/10(일)
 - 평일 1문제 => 매주 5문제씩 알고리즘 문제 풀이
-- 해당 깃헙 레포지토리에 알고리즘 문제에 대한 정답 소스코드 올리기
+- 해당 깃헙 레포지토리에 알고리즘 문제에 대한 정답 소스코드 올리기 (goormIDE 사용해 푸시)
 - 일주일에 2번 이상 알고리즘 문제에 대한 해설 올리기
 
 | 주차 | 번호 | 이름(문제링크) | 유형 | 정답 소스코드 | 해설 |
@@ -27,7 +27,6 @@
 | 4 | 19 | [대체 경로](https://level.goorm.io/exam/195701/%EB%8C%80%EC%B2%B4-%EA%B2%BD%EB%A1%9C/quiz/1) | 그래프, DFS/BFS | [소스코드](https://github.com/gloriamok/9oormthon-challenge/blob/main/Week4/Day4/Solution.cpp) |  |
 | 4 | 20 | [연결 요소 제거하기](https://level.goorm.io/exam/195702/%EC%97%B0%EA%B2%B0-%EC%9A%94%EC%86%8C-%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0/quiz/1) | 시뮬레이션, DFS/BFS | [소스코드](https://github.com/gloriamok/9oormthon-challenge/blob/main/Week4/Day5/Solution.cpp)<br/>[소스코드2](https://github.com/gloriamok/9oormthon-challenge/blob/main/Week4/Day5/Solution2.cpp) |  |
 
-<<<<<<< HEAD
 ```
 ┌───────────────────────────────────────────────┐
                                        _       
@@ -39,42 +38,3 @@
 			     🌩 𝘼𝙣𝙮𝙤𝙣𝙚 𝙘𝙖𝙣 𝙙𝙚𝙫𝙚𝙡𝙤𝙥!
 └───────────────────────────────────────────────┘
 ```
-
-# goormIDE
-Welcome to goormIDE!
-
-goormIDE is a powerful cloud IDE service to maximize productivity for developers and teams.  
-**DEVELOP WITH EXCELLENCE**  
-
-`Happy coding! The goormIDE team`
-
-
-## 🔧 Tip & Guide
-
-* Command feature
-	* You can simply run your script using the shortcut icons on the top right.
-	* Check out `PROJECT > Common/Build/Run/Test/Find Command` in the top menu.
-	
-* Get URL and Port
-	* Click `PROJECT > URL/PORT` in top menu bar.
-	* You can get default URL/Port and add URL/Port in the top menu.
-
-* Useful shortcut
-	
-| Shortcuts name     | Command (Mac) | Command (Window) |
-| ------------------ | :-----------: | :--------------: |
-| Copy in Terminal   | ⌘ + C         | Ctrl + Shift + C |
-| Paste in Terminal  | ⌘ + V         | Ctrl + Shift + V |
-| Search File        | ⌥ + ⇧ + F     | Alt + Shift + F  |
-| Terminal Toggle    | ⌥ + ⇧ + B     | Alt + Shift + B  |
-| New Terminal       | ⌥ + ⇧ + T     | Alt + Shift + T  |
-| Code Formatting    | ⌥ + ⇧ + P     | Alt + Shift + P  |
-| Show All Shortcuts | ⌘ + H         | Ctrl + H         |
-
-## 💬 Support & Documentation
-
-Visit [https://ide.goorm.io](https://ide.goorm.io) to support and learn more about using goormIDE.  
-To watch some usage guides, visit [https://help.goorm.io/en/goormide](https://help.goorm.io/en/goormide)
-=======
-# 9oormthon-challenge
->>>>>>> f772fa92aaa4980af094d53135e98ef7ca989c34
